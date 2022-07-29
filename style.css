@@ -1,0 +1,275 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Importing GOogle Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@500;700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* My Styles */
+
+:root {
+  --color-brand: #aa7840;
+  --color-secondary: #283347;
+
+  --font-roboto: Roboto, sans-serif;
+}
+
+.main {
+  background-image: url('./assets/collov-home-design-4_jQL4JCS98-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.logo {
+  width: 3.5rem;
+}
+
+.brand {
+  color: var(--color-brand);
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+
+  border-bottom: 2px solid #fff;
+  color: #fcf8f3;
+  padding: 1rem;
+}
+
+.navbar__item {
+  cursor: pointer;
+  font-family: var(--font-roboto);
+  font-size: 1.2rem;
+  font-weight: bold;
+  list-style-type: none;
+
+  transition: all 0.3s ease;
+}
+
+.navbar__item:not(:last-child):hover {
+  color: var(--color-secondary);
+}
+
+.navbar--icon {
+  width: 2.5rem;
+}
+
+.navbar__item--contact {
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  font-family: var(--font-roboto);
+  margin-top: 10rem;
+}
+
+.home__heading {
+  color: var(--color-brand);
+  font-size: 3.5rem;
+  max-width: 500px;
+}
+
+.home__heading::selection {
+  background-color: var(--color-secondary);
+}
+
+.home__btn {
+  background-color: transparent;
+  border: 3px solid var(--color-secondary);
+  border-radius: 100px;
+  color: var(--color-brand);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  outline: none;
+  padding: 1rem 3rem;
+
+  transition: all 0.3s ease;
+}
+
+.home__btn:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.popups__1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-family: var(--font-roboto);
+  padding: 1.5rem;
+  position: absolute;
+  top: 15rem;
+  right: 14rem;
+}
+
+.popups__1::before {
+  border-top: 2px solid #fff;
+  display: block;
+  position: relative;
+  /* top: -25px; */
+  right: 14rem;
+  margin: 0 auto;
+  width: 65%;
+  content: '';
+}
+
+.popups__1::after {
+  content: '';
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -7.5rem;
+  right: 19.4rem;
+  margin: 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.popups__1-text {
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-top: 1rem;
+  max-width: 15rem;
+}
+
+.popups__2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  font-family: var(--font-roboto);
+  padding: 1.5rem;
+  position: absolute;
+  top: 30rem;
+  right: 40rem;
+}
+
+.popups__2::before {
+  border-top: 2px solid #fff;
+  display: block;
+  position: relative;
+  top: 14rem;
+  right: 4rem;
+  margin: 0 auto;
+  width: 60%;
+  content: '';
+  transform: rotate(90deg);
+}
+
+.popups__2::after {
+  content: '';
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 11rem;
+  right: 4rem;
+  margin: 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.popups__2-text {
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-top: 1rem;
+  max-width: 15rem;
+}
