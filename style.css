@@ -273,3 +273,23 @@ select {
   margin-top: 1rem;
   max-width: 15rem;
 }
+
+@media (max-width: 900px) {
+  .navbar__logo {
+    padding: 2rem 0.5rem;
+  }
+
+  .navbar__items {
+    display: none;
+  }
+
+  .popups__1 {
+    top: 35rem;
+    right: 0rem;
+  }
+
+  .popups__2 {
+    top: 9rem;
+    right: 6rem;
+  }
+}
